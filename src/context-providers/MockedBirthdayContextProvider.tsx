@@ -1,6 +1,9 @@
-import React from 'react';
-import {WikiData} from '../Types';
-import {BirthdayContext, BirthdayContextInterface} from './BirthdayContextProvider';
+import React from "react";
+import { WikiData } from "../Types";
+import {
+  BirthdayContext,
+  BirthdayContextInterface,
+} from "./BirthdayContextProvider";
 
 interface MockedProviderProps {
   isLoading?: boolean;
@@ -14,16 +17,17 @@ interface MockedProviderProps {
 
 const noOp = () => {};
 
-export default function MockedBirthdayContextProvider(props: MockedProviderProps) {
-
+export default function MockedBirthdayContextProvider(
+  props: MockedProviderProps,
+) {
   const {
     isLoading = false,
     setIsLoading = noOp,
     getWikiData = noOp,
-    wikiData = {births: []},
+    wikiData = null,
     hasLoadingError = false,
     setHasLoadingError = noOp,
-    children
+    children,
   } = props;
 
   const value: BirthdayContextInterface = {
@@ -32,8 +36,8 @@ export default function MockedBirthdayContextProvider(props: MockedProviderProps
     getWikiData,
     wikiData,
     hasLoadingError,
-    setHasLoadingError
-  }
+    setHasLoadingError,
+  };
 
   return (
     <BirthdayContext.Provider value={value}>

@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../logo.svg";
-import { ReactStyleMap, WikiInfo } from "../Types";
+import logo from "../../logo.svg";
+import { ReactStyleMap, WikiInfo } from "../../Types";
 
 export interface BirthdayTileProps {
   info: WikiInfo;

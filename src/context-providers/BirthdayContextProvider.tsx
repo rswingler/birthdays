@@ -16,7 +16,7 @@ export const BirthdayContext =
 
 export function BirthdayContextProvider({ children }): React.ReactElement {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [wikiData, setWikiData] = useState<WikiData>();
+  const [wikiData, setWikiData] = useState<WikiData>(null);
   const [hasLoadingError, setHasLoadingError] = useState<boolean>(false);
 
   function getWikiData(): void {
