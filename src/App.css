@@ -1,0 +1,23 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.content {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
