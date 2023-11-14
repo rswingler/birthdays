@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../../logo.svg";
-import { ReactStyleMap, WikiInfo } from "../../Types";
+import React from 'react';
+import logo from '../../logo.svg';
+import {ReactStyleMap, WikiInfo} from '../../Types';
 
 export interface BirthdayTileProps {
   info: WikiInfo;
@@ -14,6 +14,7 @@ export function BirthdayTile({ info }: BirthdayTileProps): React.ReactElement {
       <img
         src={info?.pages[0]?.originalimage?.source ?? logo}
         style={{ width: 140, objectFit: "cover" }}
+        alt={info.text}
       />
       <div className={"flex-col"} style={{ padding: "5px 15px" }}>
         <div style={{ fontWeight: "bold" }}>
@@ -25,6 +26,7 @@ export function BirthdayTile({ info }: BirthdayTileProps): React.ReactElement {
         <a
           href={info?.pages[0]?.content_urls.desktop.page}
           target="_blank"
+          rel="noreferrer"
           style={{ width: "fit-content" }}
         >
           Full Bio
